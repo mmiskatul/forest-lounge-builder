@@ -59,8 +59,8 @@ export function MenuBoard({
   categories: MenuCategory[];
   dark?: boolean;
 }) {
-  const [active, setActive] = useState(categories[0].id);
-  const category = categories.find((c) => c.id === active) ?? categories[0];
+  const [active, setActive] = useState(categories[0]!.id);
+  const category = categories.find((c) => c.id === active) ?? categories[0]!;
 
   return (
     <div>

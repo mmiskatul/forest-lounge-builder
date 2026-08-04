@@ -19,6 +19,8 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
     return () => window.removeEventListener("keydown", onKey);
   }, [openIndex, images.length]);
 
+  const activeImage = openIndex === null ? null : images[openIndex];
+
   return (
     <>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -47,7 +49,7 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
         ))}
       </div>
 
-      {openIndex !== null ? (
+      {activeImage ? (
         <div
           role="dialog"
           aria-modal="true"
@@ -65,12 +67,12 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
           </button>
           <figure onClick={(e) => e.stopPropagation()} className="max-h-full">
             <img
-              src={images[openIndex].src}
-              alt={images[openIndex].alt}
+              src={activeImage.src}
+              alt={activeImage.alt}
               className="mx-auto max-h-[78vh] w-auto object-contain"
             />
             <figcaption className="mt-4 text-center text-sm text-cream/70">
-              {images[openIndex].alt}
+              {activeImage.alt}
             </figcaption>
           </figure>
         </div>

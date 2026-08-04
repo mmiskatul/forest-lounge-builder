@@ -29,7 +29,7 @@ export function TestimonialCard({
 export function Testimonials() {
   const [index, setIndex] = useState(0);
   const total = testimonials.length;
-  const current = testimonials[index];
+  const current = testimonials[index]!;
 
   return (
     <section className="bg-secondary">
@@ -62,7 +62,7 @@ export function Testimonials() {
         <Reveal className="mt-10" delay={80}>
           <div aria-live="polite" className="grid gap-6 lg:grid-cols-2">
             <TestimonialCard {...current} />
-            <TestimonialCard {...testimonials[(index + 1) % total]} />
+            <TestimonialCard {...testimonials[(index + 1) % total]!} />
           </div>
           <div className="mt-8 flex gap-2">
             {testimonials.map((t, i) => (
