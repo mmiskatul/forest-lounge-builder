@@ -3,10 +3,10 @@ import { ArrowLeft } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { ReservationCTA } from "@/components/ReservationCTA";
 import { postImages } from "@/lib/images";
-import { formatDate, posts } from "@/lib/site";
+import { formatDate, posts, type Post } from "@/lib/site";
 
 export const Route = createFileRoute("/news/$slug")({
-  loader: ({ params }) => {
+  loader: ({ params }): { post: Post } => {
     const post = posts.find((p) => p.slug === params.slug);
     if (!post) throw notFound();
     return { post };
