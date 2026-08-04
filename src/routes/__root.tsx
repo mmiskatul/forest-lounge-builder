@@ -81,15 +81,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "The Forest Lounge — Rooftop Restaurant & Roastery, Dhanmondi" },
+      { title: "The Forest Lounge — Rooftop Restaurant & Roastery in Dhanmondi" },
       {
         name: "description",
         content:
-          "The Forest Lounge is a rooftop restaurant, open kitchen and coffee roastery in Dhanmondi, Dhaka. Open daily, 12:00 PM – 11:00 PM.",
+          "A rooftop escape in the heart of Dhanmondi: soft-industrial dining room, open kitchen and on-site coffee roastery. Open daily, 12–11 PM. Book a table.",
       },
       { property: "og:site_name", content: "The Forest Lounge" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "The Forest Lounge — Rooftop Restaurant & Roastery in Dhanmondi" },
+      { name: "twitter:title", content: "The Forest Lounge — Rooftop Restaurant & Roastery in Dhanmondi" },
+      { property: "og:description", content: "A rooftop escape in the heart of Dhanmondi: soft-industrial dining room, open kitchen and on-site coffee roastery. Open daily, 12–11 PM. Book a table." },
+      { name: "twitter:description", content: "A rooftop escape in the heart of Dhanmondi: soft-industrial dining room, open kitchen and on-site coffee roastery. Open daily, 12–11 PM. Book a table." },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

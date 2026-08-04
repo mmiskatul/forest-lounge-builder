@@ -15,11 +15,11 @@ export const Route = createFileRoute("/")({
         content:
           "A rooftop escape in the heart of Dhanmondi: soft-industrial dining room, open kitchen and on-site coffee roastery. Open daily, 12–11 PM. Book a table.",
       },
-      { property: "og:title", content: "The Forest Lounge — Rooftop Restaurant & Roastery" },
+      { property: "og:title", content: "The Forest Lounge — Rooftop Restaurant & Roastery in Dhanmondi" },
       {
         property: "og:description",
         content:
-          "Rooftop dining, an open kitchen and a coffee roastery above Satmasjid Road, Dhanmondi, Dhaka.",
+          "A rooftop escape in the heart of Dhanmondi: soft-industrial dining room, open kitchen and on-site coffee roastery. Open daily, 12–11 PM. Book a table.",
       },
       { property: "og:url", content: "/" },
     ],
