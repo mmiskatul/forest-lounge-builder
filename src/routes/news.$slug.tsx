@@ -63,7 +63,7 @@ function PostNotFound() {
 }
 
 function NewsPost() {
-  const { post } = Route.useLoaderData();
+  const { post } = Route.useLoaderData() as { post: Post };
   const others = posts.filter((p) => p.slug !== post.slug).slice(0, 2);
 
   return (
@@ -95,7 +95,7 @@ function NewsPost() {
             <Reveal>
               <p className="font-display text-xl leading-relaxed sm:text-2xl">{post.excerpt}</p>
               <div className="mt-8 space-y-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                {post.body.map((paragraph) => (
+                {post.body.map((paragraph: string) => (
                   <p key={paragraph.slice(0, 24)}>{paragraph}</p>
                 ))}
               </div>
